@@ -36,6 +36,9 @@
       let prevCounty = undefined;
       let curentPdf = undefined;
       window.onload = () => {
+        let s = localStorage.getItem("iid");
+        if (s) clearInterval(JSON.parse(s));
+        localStorage.removeItem("iid");
         let getPathByName = (name) =>
           document.querySelector(`[name="${name}"]`);
 
@@ -62,9 +65,10 @@
             "https://docs.google.com/gview?embedded=true&url=" + curentPdf;
           link.click();
 
-          setInterval(() => {
+          let id = setInterval(() => {
             link.click();
           }, 1000);
+          localStorage.setItem("iid", JSON.stringify(id));
 
           // this downloads if on android and views if on pc
           // let link = document.createElement("a");
