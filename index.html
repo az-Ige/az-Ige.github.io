@@ -53,10 +53,10 @@
         btn.addEventListener("click", () => {
           if (curentPdf == undefined) return;
 
-          document.querySelector(".loading-gif").classList.remove("hide");
-          localStorage.setItem("curentpdf", curentPdf);
+          // document.querySelector(".loading-gif").classList.remove("hide");
+          // localStorage.setItem("curentpdf", curentPdf);
           let link = document.createElement("a");
-          link.href = "viewPdf.html";
+          link.href = curentPdf;
           link.click();
         });
 
