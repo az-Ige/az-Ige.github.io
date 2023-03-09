@@ -24,23 +24,17 @@
         fill: #680;
       }
     </style>
-    <script defer>
-      let addLink = [
-        {
-          c: "Dolj",
-          l: "https://profesorjitaruionel.com/wp-content/uploads/2022/02/E-c-matematica-M-MATE-INFO-simulare-BAC-2023-DOLJ-februarie2023-subiect-var-PDF.pdf",
-        },
-      ];
 
-      let markerAsDone = ["Dolj"];
-      let markerInProduction = ["Ilfov"];
+    <script defer src="links.js"></script>
+    <script defer>
       let prevCounty = undefined;
       let curentPdf = undefined;
       window.onload = () => {
-        addLink.map((obj) => {
-          document
-            .querySelector(`[name="${obj.c}"]`)
-            .setAttribute("pdflink", obj.l);
+        links.map((obj) => {
+          let el = document.querySelector(`[name="${obj.judet}"]`);
+          el.setAttribute("pdflink", obj.pdflink);
+          if (obj.done) el.setAttribute("fill", "rebeccapurple");
+          if (obj.todo) el.setAttribute("fill", "red");
         });
 
         let popup = document.createElement("div");
@@ -52,30 +46,22 @@
         btn.textContent = "enter pdf";
         btn.addEventListener("click", () => {
           if (curentPdf == undefined) return;
-
+          localStorage.setItem("curentpdf", curentPdf);
           let link = document.createElement("a");
-          link.href = curentPdf;
+          link.href = "viewPdf.html";
           link.click();
         });
         popup.appendChild(btn);
         document.body.appendChild(popup);
 
-        markerAsDone.map((item) => {
-          let el = document.querySelector(`[name="${item}"]`);
-          el.setAttribute("fill", "rebeccapurple");
-        });
-        markerInProduction.map((item) => {
-          let el = document.querySelector(`[name="${item}"]`);
-          el.setAttribute("fill", "red");
-        });
         document.querySelectorAll(`svg [name]`).forEach((el) => {
           el.addEventListener("click", (e) => {
+            e.stopImmediatePropagation();
+
             if (prevCounty) prevCounty.classList.remove("focus");
             prevCounty = el;
             curentPdf = el.getAttribute("pdflink");
 
-            e.stopImmediatePropagation();
-            console.log(el.getAttribute("name"));
             el.classList.add("focus");
             popup.style.display = "block";
             para.textContent = el.getAttribute("name");
