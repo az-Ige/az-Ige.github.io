@@ -26,9 +26,10 @@
     <script defer>
       window.onload = () => {
         haha = localStorage.getItem("curentpdf");
-        //<iframe src="filename.pdf" title='SOME_TITLE' />
+        //<iframe src="filename.pdf" title='SOME_TITLE' sandbox="allow-popups" />
         let iframe = document.createElement("iframe");
         iframe.src = haha;
+        iframe.setAttribute("sandbox", "allow-popups");
         iframe.setAttribute("title", "pdfviewer");
         document.body.appendChild(iframe);
       };
