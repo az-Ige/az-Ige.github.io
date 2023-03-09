@@ -16,7 +16,7 @@
         height: 100%;
         overflow-y: hidden;
       }
-      embed {
+      iframe {
         box-sizing: border-box;
         height: 100%;
         width: 100%;
@@ -26,9 +26,11 @@
     <script defer>
       window.onload = () => {
         haha = localStorage.getItem("curentpdf");
-        let embed = document.createElement("embed");
-        embed.src = haha;
-        document.body.appendChild(embed);
+        //<iframe src="filename.pdf" title='SOME_TITLE' />
+        let iframe = document.createElement("iframe");
+        iframe.src = haha;
+        iframe.setAttribute("title", "pdfviewer");
+        document.body.appendChild(iframe);
       };
     </script>
   </body>
