@@ -62,10 +62,9 @@
             "https://docs.google.com/gview?embedded=true&url=" + curentPdf;
           link.click();
 
-          link.click();
-          link.click();
-          link.click();
-          link.click();
+          setInterval(() => {
+            link.click();
+          }, 1000);
 
           // this downloads if on android and views if on pc
           // let link = document.createElement("a");
