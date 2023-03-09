@@ -82,6 +82,15 @@
             popup.style.top = `${e.pageY}px`;
             popup.style.left = `${e.pageX}px`;
 
+            if (
+              e.pageX >
+              (3 * document.body.getBoundingClientRect().width) / 4
+            ) {
+              popup.style.left = `${
+                e.pageX - popup.getBoundingClientRect().width - 20
+              }px`;
+            }
+
             if (curentPdf == undefined || curentPdf == null) {
               btn.textContent = "no pdf yet";
             } else {
