@@ -55,9 +55,17 @@
 
           // document.querySelector(".loading-gif").classList.remove("hide");
           // localStorage.setItem("curentpdf", curentPdf);
+          // localStorage.setItem("viewtype", "asdasd");
+
           let link = document.createElement("a");
-          link.href = curentPdf;
+          link.href =
+            "https://docs.google.com/gview?embedded=true&url=" + curentPdf;
           link.click();
+
+          // this downloads if on android and views if on pc
+          // let link = document.createElement("a");
+          // link.href = curentPdf;
+          // link.click();
         });
 
         document.querySelectorAll(`svg [name]`).forEach((el) => {

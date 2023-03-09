@@ -16,7 +16,9 @@
         height: 100%;
         overflow-y: hidden;
       }
-      iframe {
+      iframe,
+      embed,
+      object {
         box-sizing: border-box;
         height: 100%;
         width: 100%;
@@ -25,13 +27,48 @@
 
     <script defer>
       window.onload = () => {
-        haha = localStorage.getItem("curentpdf");
-        //<iframe src="filename.pdf" title='SOME_TITLE' sandbox="allow-popups" />
-        let iframe = document.createElement("iframe");
-        iframe.src = haha;
-        iframe.setAttribute("sandbox", "allow-popups");
-        iframe.setAttribute("title", "pdfviewer");
-        document.body.appendChild(iframe);
+        let haha = localStorage.getItem("curentpdf");
+        let viewType = localStorage.getItem("viewtype");
+
+        if (viewType == "iframe") {
+          //<iframe src="filename.pdf" title='SOME_TITLE' sandbox="allow-popups" />
+          let iframe = document.createElement("iframe");
+          iframe.src = haha;
+          iframe.setAttribute(
+            "sandbox",
+            "allow-popups allow-popups-to-escape-sandbox allow-scripts"
+          );
+          iframe.setAttribute("title", "pdfviewer");
+          document.body.appendChild(iframe);
+        } else if (viewType == "embed") {
+          document.body.innerHTML = viewType;
+        } else if (viewType == "object") {
+          // <object data="" width="800" height="500"> </object>
+          let object = document.createElement("object");
+          object.setAttribute("data", haha);
+          object.width = "100vw";
+          object.height = "100vh";
+          document.body.appendChild(object);
+        } else {
+          // document.body.innerHTML = "no view type";
+          //           <object data="https://drive.google.com/viewerng/viewer?embedded=true&url=http://health.ntuh.gov.tw/health/NTUH_e_Net/NTUH_e_Net_no91/%E7%99%8C%E7%97%87%E7%AF%A9%E6%AA%A2.pdf" type="application/pdf">
+          // <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=http://health.ntuh.gov.tw/health/NTUH_e_Net/NTUH_e_Net_no91/%E7%99%8C%E7%97%87%E7%AF%A9%E6%AA%A2.pdf" type='application/pdf'>
+          // </object>
+          let object = document.createElement("object");
+          object.setAttribute(
+            "data",
+            "https://drive.google.com/viewerng/viewer?embedded=true&url=" + haha
+          );
+          object.setAttribute("type", "application/pdf");
+          let embed = document.createElement("embed");
+          embed.setAttribute(
+            "data",
+            "https://drive.google.com/viewerng/viewer?embedded=true&url=" + haha
+          );
+          embed.setAttribute("type", "application/pdf");
+          object.appendChild(embed);
+          document.body.appendChild(object);
+        }
       };
     </script>
   </body>
