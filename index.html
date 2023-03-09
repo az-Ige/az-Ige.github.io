@@ -63,7 +63,11 @@
             }
           });
         });
-        window.addEventListener("click", () => (popup.style.display = "none"));
+        window.addEventListener("click", () => {
+          prevCounty.classList.remove("focus");
+          prevCounty == undefined;
+          popup.style.display = "none";
+        });
       };
     </script>
   </head>
