@@ -23,6 +23,9 @@
       .focus {
         fill: #680;
       }
+      .hasPdf {
+        fill: aqua;
+      }
     </style>
 
     <script defer src="links.js"></script>
@@ -30,20 +33,20 @@
       let prevCounty = undefined;
       let curentPdf = undefined;
       window.onload = () => {
+        let getPathByName = (name) =>
+          document.querySelector(`[name="${name}"]`);
+
         links.map((obj) => {
-          let el = document.querySelector(`[name="${obj.judet}"]`);
+          let el = getPathByName(obj.judet);
           el.setAttribute("pdflink", obj.pdflink);
           if (obj.done) el.setAttribute("fill", "rebeccapurple");
           if (obj.todo) el.setAttribute("fill", "red");
         });
 
-        let popup = document.createElement("div");
-        popup.classList.add("popup");
+        let popup = document.querySelector(".popup");
+        let btn = document.querySelector("#popup-btn");
+        let para = document.querySelector("#popup-p");
         popup.style.display = "none";
-        let para = document.createElement("p");
-        popup.appendChild(para);
-        let btn = document.createElement("button");
-        btn.textContent = "enter pdf";
         btn.addEventListener("click", () => {
           if (curentPdf == undefined) return;
           localStorage.setItem("curentpdf", curentPdf);
@@ -51,8 +54,6 @@
           link.href = "viewPdf.html";
           link.click();
         });
-        popup.appendChild(btn);
-        document.body.appendChild(popup);
 
         document.querySelectorAll(`svg [name]`).forEach((el) => {
           el.addEventListener("click", (e) => {
@@ -79,8 +80,23 @@
             }
           });
         });
+
+        // show who has pdf
+        document.getElementById("showwhohaspdf").onclick = () => {
+          links.map((obj) => {
+            if (obj.pdflink !== undefined) {
+              let el = getPathByName(obj.judet);
+              el.classList.add("hasPdf");
+              setTimeout(() => {
+                el.classList.remove("hasPdf");
+              }, 500);
+            }
+          });
+        };
+
+        // erase stuff on map if it clicks outside
         window.addEventListener("click", () => {
-          prevCounty.classList.remove("focus");
+          if (prevCounty) prevCounty.classList.remove("focus");
           prevCounty == undefined;
           popup.style.display = "none";
         });
@@ -88,33 +104,14 @@
     </script>
   </head>
   <body>
-    <!-- <style>
-      label[for] {
-        color: aliceblue;
-      }
-      #haha {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        padding: 5px 10px;
-        left: 50%;
-        font-size: 1.5rem;
-        transform: translateX(-50%);
-      }
-      [type="checkbox"] {
-        width: 25px;
-        accent-color: #80a;
-        height: 25px;
-      }
-    </style>
-    <div id="haha">
-      <label for="markasdone">Marcheaza ca facut</label>
-      <input type="checkbox" name="" id="markasdone" />
-    </div> -->
+    <div class="popup">
+      <p id="popup-p"></p>
+      <button id="popup-btn"></button>
+    </div>
 
+    <button style="position: sticky; top: 0px" id="showwhohaspdf">
+      Arata care au pdf
+    </button>
     <?xml version="1.0"?>
     <!--
     ************* Copyright (c) 2017 Pareto Softare, LLC DBA Simplemaps.com *******************		
