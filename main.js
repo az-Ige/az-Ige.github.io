@@ -44,7 +44,12 @@ function showCreditsAndBarem(e, elem, test, srclast) {
     const lastpart = srclast.lastIndexOf("/");
     const baremsrc =
       srclast.slice(0, lastpart) + "/barem" + srclast.slice(lastpart);
-    baremimg = $el("img", { src: baremsrc, alt: "nu are barem inca" });
+    baremimg = $el("img", {
+      src: baremsrc,
+      alt: "nu are barem inca",
+      onload: () => baremimg.classList.add("mygrow"),
+      onerror: () => baremimg.classList.add("mygrow"),
+    });
     baremimg.classList.add("comfy-taking-room");
     menu.appendChild(baremimg);
     baremimg.scrollIntoView();
@@ -70,10 +75,13 @@ function Load(what = []) {
     var lastsrc = "";
     what.map((ex) => {
       lastsrc = basesrc + ex + ".png";
-
-      result.appendChild(
-        $el("img", { src: lastsrc, ...imgopt, onerror: (e) => result.remove() })
-      );
+      const img = $el("img", {
+        src: lastsrc,
+        ...imgopt,
+        onerror: (e) => result.remove(),
+        onload: (e) => img.classList.add("mygrow"),
+      });
+      result.appendChild(img);
     });
 
     // image for checking unchecking
@@ -115,7 +123,6 @@ function CreateTd(textContent, l1id) {
         loadthose.push(
           (l1id + textContent.slice(0, -1) + g$alphabet[i]).toLowerCase()
         );
-      console.log(loadthose);
       Load(loadthose);
     },
   });

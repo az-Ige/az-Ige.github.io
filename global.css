@@ -78,14 +78,9 @@ button:active {
   background-color: #343434 !important;
 }
 
-img {
-  transition: all 500ms ease-in-out;
-  opacity: 1;
-  min-width: 100%;
-  width: 100%;
-  text-align: center;
+.loadnicely {
+  height: auto;
 }
-
 main {
   max-width: 600px;
   padding: 0px 5px;
@@ -156,4 +151,19 @@ main p {
   min-width: 1.8rem !important;
   max-width: 1.8rem !important;
   max-height: 1.8rem !important;
+}
+
+img {
+  max-height: 10px;
+  transition: max-height 0.5s cubic-bezier(1, 0.18, 1, 0.56);
+  overflow: hidden;
+
+  opacity: 1;
+  min-width: 100%;
+  width: 100%;
+  text-align: center;
+}
+.mygrow {
+  max-height: 500px;
+  /* transition: max-height 0.25s ease-in; */
 }
