@@ -107,9 +107,11 @@ function CreateTd(textContent, l1id) {
 
       var loadthose = [];
       const index = g$alphabet.indexOf(`${textContent}`.at(-1));
-      if (index == -1) return Load([l1id + textContent]);
+      if (index == -1) return Load([(l1id + textContent).toLowerCase()]);
       for (let i = 0; i <= index; i++)
-        loadthose.push(l1id + textContent.slice(0, -1) + g$alphabet[i]);
+        loadthose.push(
+          (l1id + textContent.slice(0, -1) + g$alphabet[i]).toLowerCase()
+        );
       console.log(loadthose);
       Load(loadthose);
     },
