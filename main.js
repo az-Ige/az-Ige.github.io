@@ -44,7 +44,7 @@ function showCreditsAndBarem(e, elem, test, srclast) {
     const lastpart = srclast.lastIndexOf("/");
     const baremsrc =
       srclast.slice(0, lastpart) + "/barem" + srclast.slice(lastpart);
-    baremimg = $el("img", { src: baremsrc });
+    baremimg = $el("img", { src: baremsrc, alt: "nu are barem inca" });
     baremimg.classList.add("comfy-taking-room");
     menu.appendChild(baremimg);
     baremimg.scrollIntoView();
@@ -67,14 +67,14 @@ function Load(what = []) {
     // create img group
     var result = $el("div");
     result.classList.add("imggroup");
+    var lastsrc = "";
     what.map((ex) => {
       lastsrc = basesrc + ex + ".png";
-      result.appendChild($el("img", { src: lastsrc, ...imgopt }));
-    });
 
-    // append and add listeners
-    $("main").appendChild(result);
-    result.onclick = (e) => showCreditsAndBarem(e, result, test, lastsrc);
+      result.appendChild(
+        $el("img", { src: lastsrc, ...imgopt, onerror: (e) => result.remove() })
+      );
+    });
 
     // image for checking unchecking
     var checksrc = "Sprites/notdone.jpg";
@@ -94,6 +94,9 @@ function Load(what = []) {
         if (!$("#testid img")) $("#testid button")?.click();
       }
     };
+    // append and add listeners
+    $("main").appendChild(result);
+    result.onclick = (e) => showCreditsAndBarem(e, result, test, lastsrc);
   });
 }
 
