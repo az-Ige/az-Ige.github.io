@@ -27,7 +27,7 @@ a {
   font-size: 1.75rem;
   background-color: #181818dc;
   padding: 10px 10px;
-  gap: 4px;
+  gap: 1px;
   opacity: 1;
   color: aliceblue;
   transition: all 500ms ease-in-out;
@@ -53,9 +53,10 @@ button:active {
   opacity: 0 !important;
 }
 #structure {
-  max-width: 600px;
+  max-width: 850px;
   padding: 0px 5px;
 
+  z-index: 0;
   width: 100%;
   position: sticky;
   top: 0px;
@@ -82,7 +83,8 @@ button:active {
   height: auto;
 }
 main {
-  max-width: 600px;
+  z-index: 999;
+  max-width: 850px;
   padding: 0px 5px;
   box-sizing: border-box;
   width: 100%;
@@ -91,7 +93,6 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 3px;
 }
 main p {
   background-color: #343434;
@@ -124,6 +125,7 @@ main p {
 }
 
 #testid > * > span {
+  background-color: #1d1d1d;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -144,6 +146,7 @@ main p {
 }
 
 .checkmark {
+  display: none !important;
   position: absolute;
   right: 1px;
   top: 1px;

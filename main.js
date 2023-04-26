@@ -33,7 +33,7 @@ function showCreditsAndBarem(e, elem, test, srclast) {
 
   // inser menu after clicked img
   elem.after(menu);
-  menu.scrollIntoView();
+  // if (elem.getAttribute("scroll")) menu.scrollIntoView();
 
   // toggle answer logic and btn
   const toggleAnswer = $el("button", { textContent: "rezolvare" });
@@ -52,7 +52,7 @@ function showCreditsAndBarem(e, elem, test, srclast) {
     });
     baremimg.classList.add("comfy-taking-room");
     menu.appendChild(baremimg);
-    baremimg.scrollIntoView();
+    // baremimg.scrollIntoView();
   });
 }
 
@@ -65,7 +65,6 @@ function Load(what = []) {
   };
 
   $("main").innerHTML = "";
-
   Object.keys(g$materiecurenta.$testeadded).map((test) => {
     var basesrc = `./Materii/${g$materiecurenta.$materiename}/${test}/`;
 
@@ -104,6 +103,7 @@ function Load(what = []) {
     };
     // append and add listeners
     $("main").appendChild(result);
+    last = result;
     result.onclick = (e) => showCreditsAndBarem(e, result, test, lastsrc);
   });
 }
