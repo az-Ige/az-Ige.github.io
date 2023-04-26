@@ -191,10 +191,9 @@ img {
 
 #teorie {
   overflow-y: auto;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 5%;
   max-height: 90%;
-  position: absolute;
   background-color: #1d1d1d;
   z-index: 999999;
   border: 1px solid #909;
