@@ -58,6 +58,9 @@ function showCreditsAndBarem(e, elem, test, srclast) {
 
 // enter exercitiu
 function Load(what = []) {
+  localStorage.setItem("what", JSON.stringify(what));
+  console.log(localStorage.getItem("what"));
+
   // img options
   const imgopt = {
     loading: "lazy",
@@ -158,7 +161,11 @@ function CreateStructure(l1) {
 }
 
 CreateStructure(g$materiecurenta.$structure);
-Load(["i1"]);
+let s = localStorage.getItem("what");
+console.log(s);
+if (s) Load(JSON.parse(s));
+else Load(["i1"]);
+
 // const QueryUserDiv = $("#query-user");
 // var Choices = [];
 // function Finished(result) {
