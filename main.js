@@ -1,3 +1,6 @@
+const teorieContainer = document.querySelector("#teorie");
+const teorieToggle = document.getElementById("toggle-teorie");
+const actuallyTeorie = document.getElementById("actually-teorie");
 var g$materiecurenta = g$conf.$materii.$MatematicaM1;
 var lastimgclicked;
 window.onclick = () => ($("#testid")?.remove(), (lastimgclicked = undefined));
@@ -59,7 +62,22 @@ function showCreditsAndBarem(e, elem, test, srclast) {
 // enter exercitiu
 function Load(what = []) {
   localStorage.setItem("what", JSON.stringify(what));
-  console.log(localStorage.getItem("what"));
+
+  actuallyTeorie.innerHTML = "";
+  teorieToggle.classList.add("hide");
+  const teorieUrl = `./Materii/${
+    g$materiecurenta.$materiename
+  }/teorie/${what.at(-1)}/`;
+  g$materiecurenta.$teorie[what.at(-1)]?.map((imgName) => {
+    const img = $el("img", {
+      src: teorieUrl + imgName,
+      onload: (e) => {
+        img.classList.add("mygrow");
+        teorieToggle.classList.remove("hide");
+      },
+    });
+    actuallyTeorie.appendChild(img);
+  });
 
   // img options
   const imgopt = {
@@ -162,7 +180,6 @@ function CreateStructure(l1) {
 
 CreateStructure(g$materiecurenta.$structure);
 let s = localStorage.getItem("what");
-console.log(s);
 if (s) Load(JSON.parse(s));
 else Load(["i1"]);
 

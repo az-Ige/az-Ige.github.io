@@ -173,3 +173,33 @@ img {
   max-height: 500px;
   /* transition: max-height 0.25s ease-in; */
 }
+
+#teorie {
+  max-width: 850px !important;
+  min-width: unset !important;
+  /* display: none; */
+}
+.hide {
+  display: none;
+}
+
+#toggle-teorie {
+  position: sticky;
+  top: 0px;
+  z-index: 99999999;
+}
+
+#teorie {
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  max-height: 90%;
+  position: absolute;
+  background-color: #1d1d1d;
+  z-index: 999999;
+  border: 1px solid #909;
+}
+
+#teorie * {
+  background-color: #1d1d1d;
+}

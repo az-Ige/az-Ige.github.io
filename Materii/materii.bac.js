@@ -11,6 +11,9 @@ var $materii = {
   $MatematicaM1: {
     $materiename: "MatematicaM1",
     $aliases: ["mate", "m1"],
+    $teorie: {
+      i5: ["abvector.png"],
+    },
     $structure: [6, [3, 3], [3, 3]], // => see ReadMe
     $testeadded: {
       "2022_ta_01": {
