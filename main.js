@@ -71,6 +71,8 @@ function Load(what = []) {
     // create img group
     var result = $el("div");
     result.classList.add("imggroup");
+    result.classList.add("darktheme");
+
     var lastsrc = "";
     what.map((ex) => {
       lastsrc = basesrc + ex + ".png";

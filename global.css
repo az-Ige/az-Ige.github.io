@@ -119,6 +119,9 @@ main p {
 .imggroup * {
   width: 100%;
 }
+.imggroup.darktheme img {
+  filter: invert() contrast(80%);
+}
 
 #testid {
   width: 100%;
