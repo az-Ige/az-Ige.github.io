@@ -30,6 +30,9 @@ var $materii = {
           "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2022/matematica_m_mate-info_2022_var_model.pdf",
       },
 
+      //
+      //  2021
+      //
       "2021_ta_01": {
         varianta:
           "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2021/matematica_m_mate-info_2021_test_01.pdf",
@@ -66,6 +69,10 @@ var $materii = {
         varianta:
           "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2021/matematica_m_mate-info_2021_test_09.pdf",
       },
+      "2021_ta_10_olimpici": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2021/matematica_m_mate-info_2021_test_10.pdf",
+      },
       "2021_ta_11": {
         varianta:
           "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2021/matematica_m_mate-info_2021_test_11.pdf",
@@ -74,11 +81,77 @@ var $materii = {
         varianta:
           "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2021/matematica_m_mate-info_2021_test_12.pdf",
       },
-      "2020_ta_20": {
+
+      //
+      //  2020
+      //
+
+      "2020_ta_01": {
         varianta:
-          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_20.pdf",
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_01.pdf",
+      },
+      "2020_ta_02": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_02.pdf",
+      },
+      "2020_ta_03": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_03.pdf",
+      },
+      "2020_ta_04": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_04.pdf",
+      },
+      "2020_ta_05": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_05.pdf",
+      },
+      "2020_ta_06": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_06.pdf",
+      },
+      "2020_ta_07": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_07.pdf",
+      },
+      "2020_ta_08": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_08.pdf",
+      },
+      "2020_ta_09": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_09.pdf",
+      },
+      "2020_ta_12": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_11.pdf",
+      },
+      "2020_ta_13": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_12.pdf",
+      },
+      "2020_ta_14": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_13.pdf",
+      },
+      "2020_ta_15": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_14.pdf",
+      },
+      "2020_ta_16": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_15.pdf",
+      },
+      "2020_ta_17": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_16.pdf",
+      },
+
+      "2020_ta_18": {
+        varianta:
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_18.pdf",
         barem:
-          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_bar_20.pdf",
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_bar_18.pdf",
       },
       "2020_ta_19": {
         varianta:
@@ -86,11 +159,11 @@ var $materii = {
         barem:
           "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_bar_19.pdf",
       },
-      "2020_ta_18": {
+      "2020_ta_20": {
         varianta:
-          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_18.pdf",
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_20.pdf",
         barem:
-          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_bar_18.pdf",
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_bar_20.pdf",
       },
     },
   },
