@@ -127,27 +127,27 @@ var $materii = {
       },
       "2020_ta_12": {
         varianta:
-          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_11.pdf",
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_12.pdf",
       },
       "2020_ta_13": {
         varianta:
-          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_12.pdf",
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_13.pdf",
       },
       "2020_ta_14": {
         varianta:
-          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_13.pdf",
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_14.pdf",
       },
       "2020_ta_15": {
         varianta:
-          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_14.pdf",
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_15.pdf",
       },
       "2020_ta_16": {
         varianta:
-          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_15.pdf",
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_16.pdf",
       },
       "2020_ta_17": {
         varianta:
-          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_16.pdf",
+          "https://bac.simplu.info/vezi-pdf/web/viewer?file=https://arhiva.simplu.info/bac/mate/variante-2020/matematica_m_mate-info_2020_test_17.pdf",
       },
 
       "2020_ta_18": {
